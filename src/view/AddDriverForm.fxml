@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="addDriverContext" prefHeight="680.0" prefWidth="872.0" stylesheets="@../DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddDriverFormController">
+   <children>
+      <ImageView fitHeight="680.0" fitWidth="872.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/DarkBluew.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="86.0" layoutY="75.0" prefHeight="26.0" prefWidth="141.0" styleClass="titulo" text="Driver Name">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtDriverName" focusColor="#ffff8d" layoutX="279.0" layoutY="73.0" prefHeight="31.0" prefWidth="485.0" promptText="name" styleClass="text-field" unFocusColor="#e4d3d3" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="86.0" layoutY="168.0" prefHeight="26.0" prefWidth="141.0" styleClass="titulo" text="NIC">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtNIC" focusColor="#ffff8d" layoutX="279.0" layoutY="166.0" prefHeight="31.0" prefWidth="485.0" promptText="nic" styleClass="text-field" unFocusColor="#e4d3d3" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="64.0" layoutY="250.0" prefHeight="27.0" prefWidth="163.0" styleClass="titulo" text="Dricing License No">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtLicenseNo" focusColor="#ffff8d" layoutX="279.0" layoutY="248.0" prefHeight="31.0" prefWidth="485.0" promptText="license no" unFocusColor="#e4d3d3" />
+      <Button layoutX="209.0" layoutY="603.0" mnemonicParsing="false" onAction="#btnAddDriverOnAction" prefHeight="50.0" prefWidth="190.0" text="Add Driver" />
+      <Button fx:id="btncancel" layoutX="555.0" layoutY="603.0" mnemonicParsing="false" onAction="#btnCancelOnAction" prefHeight="50.0" prefWidth="190.0" text="Cancel" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="86.0" layoutY="364.0" prefHeight="26.0" prefWidth="141.0" styleClass="titulo" text="Address">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextArea fx:id="txtAddress" focusColor="#ffff8d" labelFloat="true" layoutX="279.0" layoutY="329.0" prefHeight="97.0" prefWidth="485.0" promptText="Address" unFocusColor="#e4d3d3" />
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="86.0" layoutY="497.0" prefHeight="26.0" prefWidth="141.0" styleClass="titulo" text="Contact No">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtContactNo" focusColor="#ffff8d" layoutX="279.0" layoutY="495.0" prefHeight="31.0" prefWidth="485.0" promptText="Tel-No" unFocusColor="#e4d3d3" />
+      <Label fx:id="lblNameError" layoutX="279.0" layoutY="120.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="You must Enter only letters!!" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" wrappingWidth="24.0" />
+         </graphic>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNicError" layoutX="279.0" layoutY="209.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="You must Enter only letters and Numbers!!" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" wrappingWidth="24.0" />
+         </graphic>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblLicenseError" layoutX="279.0" layoutY="292.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="You must Enter only letters and Numbers!!" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" wrappingWidth="24.0" />
+         </graphic>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAddressError" layoutX="279.0" layoutY="446.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="You must Enter only letters and Numbers!!" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" wrappingWidth="24.0" />
+         </graphic>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblContactNoError" layoutX="279.0" layoutY="534.0" prefHeight="25.0" prefWidth="485.0" styleClass="wrong-input-lbl" text="You must Enter only  Numbers and Number Count must be 10!!" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" wrappingWidth="24.0" />
+         </graphic>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNameAlreadyExistsError" layoutX="279.0" layoutY="119.0" prefHeight="21.0" prefWidth="376.0" styleClass="wrong-input-lbl" text="This name is Already Exists!!!" visible="false">
+         <graphic>
+            <FontAwesomeIconView fill="RED" glyphName="WARNING" size="20" wrappingWidth="24.0" />
+         </graphic>
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="VehicleDriverDetailsContext" prefHeight="1061.0" prefWidth="1925.0" stylesheets="@../DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.VehicleAndDriverDetailsFormController">
+   <children>
+      <JFXTabPane prefHeight="1061.0" prefWidth="1925.0">
+         <tabs>
+            <Tab text="Driver Details">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <ImageView fitHeight="1011.0" fitWidth="1925.0" layoutX="2.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/room.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tblIDriverDetailsView" layoutX="23.0" layoutY="157.0" opacity="0.57" prefHeight="822.0" prefWidth="1877.0">
+                           <columns>
+                              <TableColumn fx:id="colDriverName" prefWidth="352.0" text="Driver Name" />
+                              <TableColumn fx:id="colDriverNic" prefWidth="333.0" text="NIC" />
+                              <TableColumn fx:id="colDrivingLicense" prefWidth="361.0" text="Driving License No" />
+                              <TableColumn fx:id="colAddress" minWidth="9.0" prefWidth="519.0" text="Address" />
+                              <TableColumn fx:id="colContactNo" minWidth="9.0" prefWidth="311.0" text="Contact No" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#menuEditOnAction" text="Edit" />
+                                  <MenuItem mnemonicParsing="false" onAction="#menuDeleteOnAction" text="Delete" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Vehicle Details">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="1925.0">
+                     <children>
+                        <ImageView fitHeight="1011.0" fitWidth="1925.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../asserts/room.jpg" />
+                           </image>
+                        </ImageView>
+                        <TableView fx:id="tblIVehcleDetailsView" layoutX="25.0" layoutY="154.0" opacity="0.57" prefHeight="816.0" prefWidth="1875.0">
+                           <columns>
+                              <TableColumn fx:id="colVehicleNumber" prefWidth="501.0" text="Vehicle No" />
+                              <TableColumn fx:id="colVehicleType" prefWidth="518.0" text="Vehicle type" />
+                              <TableColumn fx:id="colMaximumWeight" prefWidth="473.0" text="Maximum Weight" />
+                              <TableColumn fx:id="colNoOfPassengers" minWidth="9.0" prefWidth="380.0" text="No of Passengers" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#menuVehicleDeleteOnAction" text="Delete" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+         </tabs>
+      </JFXTabPane>
+      <JFXButton fx:id="btnCancel" contentDisplay="GRAPHIC_ONLY" layoutX="1856.0" layoutY="63.0" onAction="#btnCloseOnAction" prefHeight="40.0" prefWidth="33.0">
+         <graphic>
+            <FontAwesomeIconView fx:id="btnIconView" glyphName="CLOSE" size="25" styleClass="glyph-icons" text="" wrappingWidth="20.285715103149414" />
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

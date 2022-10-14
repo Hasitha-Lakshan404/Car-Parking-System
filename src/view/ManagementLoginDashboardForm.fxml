@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="ManagementLoginDashboardContext" prefHeight="1061.0" prefWidth="1925.0" stylesheets="@../DarkTheme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManagementLoginDashboardFormController">
+   <children>
+      <ImageView fitHeight="1061.0" fitWidth="1925.0" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/nightPark.jpg" />
+         </image>
+      </ImageView>
+      <JFXComboBox fx:id="cmbSelectType" layoutX="168.0" layoutY="87.0" prefHeight="33.0" prefWidth="312.0" promptText="                          Select Type" styleClass="button" />
+      <JFXButton layoutX="873.0" layoutY="72.0" onAction="#btnAddVehicleOnAction" prefHeight="65.0" prefWidth="264.0" text="  Add Vehicle">
+         <graphic>
+            <FontAwesomeIconView fill="#3b3b3b" glyphName="CAR" size="36" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="1247.0" layoutY="72.0" onAction="#btnAddDriverOnAction" prefHeight="65.0" prefWidth="264.0" text=" Add Driver">
+         <graphic>
+            <FontAwesomeIconView fill="#3b3b3b" glyphName="USER_PLUS" size="36" />
+         </graphic>
+      </JFXButton>
+      <JFXButton layoutX="1587.0" layoutY="72.0" onAction="#btnLogOutOnAction" prefHeight="65.0" prefWidth="264.0" text="  Log out">
+         <graphic>
+            <FontAwesomeIconView fill="#3b3b3b" glyphName="SIGN_OUT" size="36" styleClass="glyph-icons" />
+         </graphic>
+      </JFXButton>
+      <AnchorPane fx:id="tblChangerContext" layoutX="21.0" layoutY="258.0" prefHeight="742.0" prefWidth="1873.0" />
+      <Label layoutX="1700.0" layoutY="1010.0" onMouseClicked="#lblSeeMoreOnAction" prefHeight="23.0" prefWidth="174.0" text="See more Details..." />
+   </children>
+</AnchorPane>
